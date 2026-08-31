@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Catalogo Biblioteca</string>
+    <string name="Item_inicio">Inicio</string>
+    <string name="Item_Catalogo">Catálogo</string>
+    <string name="Item_Prestamos">Prestamos</string>
+    <string name="Item_Favoritos">Favoritos</string>
+    <string name="Item_Perfil">Perfil</string>
+
+    <string name="TituloRL">Titulo</string>
 </resources>
