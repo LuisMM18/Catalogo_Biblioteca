@@ -5,6 +5,11 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.catalogo_biblioteca.Fragmentos.FragmentCatalogo
+import com.example.catalogo_biblioteca.Fragmentos.FragmentFavoritos
+import com.example.catalogo_biblioteca.Fragmentos.FragmentInicio
+import com.example.catalogo_biblioteca.Fragmentos.FragmentPerfil
+import com.example.catalogo_biblioteca.Fragmentos.FragmentPrestamos
 import com.example.catalogo_biblioteca.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -13,16 +18,80 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding= ActivityMainBinding.inflate(layoutInflater)
-
-        enableEdgeToEdge()
         setContentView(binding.root)
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        verFragmentInicio()
+
+        binding.BottomNV.setOnItemSelectedListener { item ->
+            when(item.itemId){
+                R.id.Item_inicio->{
+                    verFragmentInicio()
+                    true
+                }
+                R.id.Item_Catalogo->{
+                    verFragmentCatalogo()
+                    true
+                }
+                R.id.Item_Prestamos->{
+                    verFragmentPrestamos()
+                    true
+                }
+                R.id.Item_Favoritos->{
+                    verFragmentFavoritos()
+                    true
+                }
+                R.id.Item_Perfil-> {
+                    verFragmentPerfil()
+                    true
+                }
+                else -> {
+                    false
+                }
+            }
         }
+
+
+
+
     }
+
+    private fun verFragmentInicio(){
+        binding.TituloRL.text="Inicio"
+        val fragment = FragmentInicio()
+        val fragmentTransition = supportFragmentManager.beginTransaction()
+        fragmentTransition.replace(binding.Fragment1.id,fragment, "FragmentInicio")
+    }
+    private fun verFragmentCatalogo(){
+        binding.TituloRL.text="Catalogo"
+        val fragment = FragmentCatalogo()
+        val fragmentTransition = supportFragmentManager.beginTransaction()
+        fragmentTransition.replace(binding.Fragment1.id,fragment, "FragmentCatalogo")
+        fragmentTransition.commit()
+    }
+    private fun verFragmentPrestamos(){
+        binding.TituloRL.text="Prestamos"
+        val fragment = FragmentPrestamos()
+        val fragmentTransition = supportFragmentManager.beginTransaction()
+        fragmentTransition.replace(binding.Fragment1.id,fragment, "FragmentPrestamos")
+        fragmentTransition.commit()
+    }
+    private fun verFragmentFavoritos(){
+        binding.TituloRL.text="Favoritos"
+        val fragment = FragmentFavoritos()
+        val fragmentTransition = supportFragmentManager.beginTransaction()
+        fragmentTransition.replace(binding.Fragment1.id,fragment, "FragmentFavoritos")
+        fragmentTransition.commit()
+    }
+    private fun verFragmentPerfil(){
+        binding.TituloRL.text="Perfil"
+        val fragment = FragmentPerfil()
+        val fragmentTransition = supportFragmentManager.beginTransaction()
+        fragmentTransition.replace(binding.Fragment1.id,fragment, "FragmentPerfil")
+        fragmentTransition.commit()
+    }
+
+
+
+
 }
