@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Permiso de Internet requerido para Firebase (Paso 17 del PDF) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,16 +14,30 @@
         android:roundIcon="@mipmap/ic_catalogo_biblioteca_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Catalogo_Biblioteca">
+
+        <!-- Actividad Principal de Inicio: OpcionesLogin (Pasos 13-14 del PDF) -->
         <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize">
+            android:name=".Opciones_Login.OpcionesLogin"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".Opciones_Login.Login_email"
+            android:exported="false" />
+
+        <activity
+            android:name=".Opciones_Login.Registro_email"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
     </application>
 
 </manifest>

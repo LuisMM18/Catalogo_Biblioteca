@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_warm"
+    tools:context=".Opciones_Login.Registro_email">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="30dp"
+            android:gravity="center">
+
+            <!-- Título -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_registro"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:textSize="22sp"/>
+
+            <!-- Ícono decorativo / Avatar -->
+            <FrameLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bg_circle_avatar">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_usuario"
+                    app:tint="@color/coral_primary"
+                    android:contentDescription="@string/titulo_registro"/>
+            </FrameLayout>
+
+            <!-- Campo Nombre -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxBackgroundColor="@color/card_bg"
+                app:boxStrokeColor="@color/coral_primary"
+                app:hintTextColor="@color/coral_primary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Et_nombres"
+                    android:hint="@string/hint_nombre"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/text_primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Campo Email (Paso 15 del PDF) -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxBackgroundColor="@color/card_bg"
+                app:boxStrokeColor="@color/coral_primary"
+                app:hintTextColor="@color/coral_primary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Et_email"
+                    android:hint="@string/hint_email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/text_primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Campo Password (Paso 16-17 del PDF) -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxBackgroundColor="@color/card_bg"
+                app:boxStrokeColor="@color/coral_primary"
+                app:hintTextColor="@color/coral_primary"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/coral_primary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Et_password"
+                    android:hint="@string/hint_password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/text_primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Campo Repetir Password (Paso 18 del PDF) -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxBackgroundColor="@color/card_bg"
+                app:boxStrokeColor="@color/coral_primary"
+                app:hintTextColor="@color/coral_primary"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/coral_primary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Et_r_password"
+                    android:hint="@string/hint_repetir_password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/text_primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Botón Registrar (Paso 19 del PDF) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/Btn_registrar"
+                android:text="@string/btn_registrar"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/coral_primary"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/m_button_height"
+                app:cornerRadius="28dp"/>
+
+            <!-- Enlace Volver a Iniciar Sesión -->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="@string/ya_tienes_cuenta"
+                    android:textColor="@color/text_secondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/Txt_iniciar_sesion"
+                    android:text="@string/inicia_sesion"
+                    android:textColor="@color/coral_primary"
+                    android:textStyle="bold"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+
+</RelativeLayout>

@@ -6,47 +6,62 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg_warm"
     tools:context=".MainActivity">
 
+    <!-- Toolbar del PDF (Oculta por defecto para dar paso al diseño personalizado de cada pantalla) -->
     <RelativeLayout
         android:id="@+id/ToolbarRL"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/m_tool_height">
+        android:layout_height="@dimen/m_tool_height"
+        android:visibility="gone">
 
         <TextView
             android:id="@+id/TituloRL"
             android:text="@string/TituloRL"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"/>
+            android:layout_centerInParent="true"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#ccc"
+            android:background="@color/border_light"
             android:layout_alignParentBottom="true"/>
     </RelativeLayout>
 
+    <!-- Contenedor dinámico de fragmentos -->
     <FrameLayout
         android:id="@+id/Fragment1"
-        android:layout_below="@+id/ToolbarRL"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/View1"/>
+        android:layout_below="@+id/ToolbarRL"
+        android:layout_above="@+id/View1"
+        android:background="@color/bg_warm"/>
 
+    <!-- Divisor sutil sobre la barra de navegación -->
+    <View
+        android:id="@+id/View1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/border_light"
+        android:layout_above="@+id/BottomNV"/>
+
+    <!-- Barra de navegación inferior estilizada -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/BottomNV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:background="@color/card_bg"
+        app:itemIconTint="@color/color_selector_nav"
+        app:itemTextColor="@color/color_selector_nav"
+        app:itemRippleColor="@color/coral_light"
         app:menu="@menu/mi_menu"
-        app:labelVisibilityMode="labeled"/>
-
-    <View
-        android:id="@+id/View1"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#ccc"
-        android:layout_above="@+id/BottomNV"/>
+        app:labelVisibilityMode="labeled"
+        app:elevation="8dp"/>
 
 </RelativeLayout>
