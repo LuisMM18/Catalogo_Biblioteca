@@ -22,7 +22,7 @@ class OpcionesLogin : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
         comprobarSesion()
 
-        // Evento botón Ingresar con Email (Paso 18 del PDF)
+        // Evento botón Ingresar con Email
         binding.IngresarEmail.setOnClickListener {
             startActivity(Intent(this@OpcionesLogin, Login_email::class.java))
         }
@@ -39,7 +39,7 @@ class OpcionesLogin : AppCompatActivity() {
         }
     }
 
-    // Comprueba si el usuario ya inició sesión previamente (Paso 40 del PDF)
+    // Comprueba si el usuario ya inició sesión previamente
     private fun comprobarSesion() {
         if (firebaseAuth.currentUser != null) {
             startActivity(Intent(this, MainActivity::class.java))

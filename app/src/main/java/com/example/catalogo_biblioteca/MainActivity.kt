@@ -22,14 +22,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Inicializar Firebase Auth y verificar sesión (Pasos 36-39 del PDF)
         firebaseAuth = FirebaseAuth.getInstance()
         comprobarSesion()
 
-        // Mostrar fragmento inicial
         verFragmentInicio()
 
-        // Listener de la barra de navegación inferior (Pasos 53, 64 del PDF)
         binding.BottomNV.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.Item_inicio -> {
@@ -57,7 +54,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // Comprueba si el usuario se encuentra conectado (Paso 37 del PDF)
     private fun comprobarSesion() {
         if (firebaseAuth.currentUser == null) {
             startActivity(Intent(this@MainActivity, OpcionesLogin::class.java))

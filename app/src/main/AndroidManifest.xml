@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Permiso de Internet requerido para Firebase (Paso 17 del PDF) -->
+    <!-- Permiso de Internet requerido para Firebase -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Catalogo_Biblioteca">
 
-        <!-- Actividad Principal de Inicio: OpcionesLogin (Pasos 13-14 del PDF) -->
+        <!-- Actividad Principal de Inicio: OpcionesLogin -->
         <activity
             android:name=".Opciones_Login.OpcionesLogin"
             android:exported="true">

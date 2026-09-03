@@ -334,7 +334,7 @@
                     android:layout_marginStart="52dp"
                     android:background="@color/border_light"/>
 
-                <!-- Cerrar sesión (Paso 104-108 del PDF) -->
+                <!-- Cerrar sesión -->
                 <LinearLayout
                     android:id="@+id/Btn_cerrar_sesion"
                     android:layout_width="match_parent"

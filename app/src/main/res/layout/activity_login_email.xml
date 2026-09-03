@@ -40,7 +40,7 @@
                 android:contentDescription="@string/titulo_login"/>
         </FrameLayout>
 
-        <!-- Campo Email (Paso 12-14 del PDF) -->
+        <!-- Campo Email -->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
                 android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Campo Password (Paso 15, 17 del PDF) -->
+        <!-- Campo Password -->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -86,7 +86,7 @@
                 android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Botón Ingresar (Paso 16, 21 del PDF) -->
+        <!-- Botón Ingresar -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/Btn_ingresar"
             android:text="@string/btn_ingresar"
@@ -98,7 +98,7 @@
             android:layout_height="@dimen/m_button_height"
             app:cornerRadius="28dp"/>
 
-        <!-- Enlace para ir a Registro (Paso 22 del PDF) -->
+        <!-- Enlace para ir a Registro -->
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

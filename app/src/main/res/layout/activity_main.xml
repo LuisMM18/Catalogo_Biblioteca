@@ -9,7 +9,7 @@
     android:background="@color/bg_warm"
     tools:context=".MainActivity">
 
-    <!-- Toolbar del PDF (Oculta por defecto para dar paso al diseño personalizado de cada pantalla) -->
+    <!-- Toolbar (Oculta por defecto para dar paso al diseño personalizado de cada pantalla) -->
     <RelativeLayout
         android:id="@+id/ToolbarRL"
         android:layout_width="match_parent"

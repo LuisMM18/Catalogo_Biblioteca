@@ -67,7 +67,7 @@
                     android:layout_height="wrap_content"/>
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Campo Email (Paso 15 del PDF) -->
+            <!-- Campo Email -->
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -89,7 +89,7 @@
                     android:layout_height="wrap_content"/>
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Campo Password (Paso 16-17 del PDF) -->
+            <!-- Campo Password -->
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -113,7 +113,7 @@
                     android:layout_height="wrap_content"/>
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Campo Repetir Password (Paso 18 del PDF) -->
+            <!-- Campo Repetir Password -->
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -137,7 +137,7 @@
                     android:layout_height="wrap_content"/>
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Botón Registrar (Paso 19 del PDF) -->
+            <!-- Botón Registrar -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/Btn_registrar"
                 android:text="@string/btn_registrar"

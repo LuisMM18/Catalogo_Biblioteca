@@ -29,15 +29,15 @@ class Registro_email : AppCompatActivity() {
         binding = ActivityRegistroEmailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Inicializar Firebase Auth (Paso 11 del PDF)
+        // Inicializar Firebase Auth
         firebaseAuth = FirebaseAuth.getInstance()
 
-        // Configurar cuadro de diálogo (Paso 10-11 del PDF)
+        // Configurar cuadro de diálogo
         progressDialog = ProgressDialog(this)
         progressDialog.setTitle(getString(R.string.msg_espere_por_favor))
         progressDialog.setCanceledOnTouchOutside(false)
 
-        // Evento botón Registrar (Paso 13 del PDF)
+        // Evento botón Registrar
         binding.BtnRegistrar.setOnClickListener {
             validarInfo()
         }
@@ -48,7 +48,7 @@ class Registro_email : AppCompatActivity() {
         }
     }
 
-    // Validar campos según condiciones del PDF (Paso 19 del PDF)
+    // Validar campos de entrada
     private fun validarInfo() {
         nombres = binding.EtNombres.text.toString().trim()
         email = binding.EtEmail.text.toString().trim()
@@ -81,7 +81,7 @@ class Registro_email : AppCompatActivity() {
         }
     }
 
-    // Registro de usuario en Firebase Authentication (Paso 21-23 del PDF)
+    // Registro de usuario en Firebase Authentication
     private fun registrarUsuario() {
         progressDialog.setMessage(getString(R.string.msg_creando_cuenta))
         progressDialog.show()
@@ -100,7 +100,7 @@ class Registro_email : AppCompatActivity() {
             }
     }
 
-    // Guardado de datos del usuario en Firebase Realtime Database (Paso 30-35 del PDF)
+    // Guardado de datos del usuario en Firebase Realtime Database
     private fun llenarInfoBD() {
         progressDialog.setMessage(getString(R.string.msg_guardando_info))
 
@@ -108,7 +108,7 @@ class Registro_email : AppCompatActivity() {
         val emailUsuario = firebaseAuth.currentUser!!.email
         val uidUsuario = firebaseAuth.uid
 
-        // Estructura HashMap para Firebase (Paso 31-32 del PDF)
+        // Estructura HashMap para Firebase
         val hashMap = HashMap<String, Any>()
         hashMap["nombres"] = nombres
         hashMap["codigoTelefono"] = ""
@@ -126,11 +126,7 @@ class Registro_email : AppCompatActivity() {
         hashMap["prestamosActivos"] = 0
         hashMap["favoritos"] = 0
 
-        /* 
-         * Referencia a la Realtime Database de Firebase (Paso 33 del PDF)
-         * NOTA: Si tu base de datos tiene una URL específica en Firebase Console,
-         * puedes usar: FirebaseDatabase.getInstance("https://TU-DATABASE.firebaseio.com").getReference("Usuarios")
-         */
+
         val ref = FirebaseDatabase.getInstance().getReference(Constantes.BD_USUARIOS)
         ref.child(uidUsuario!!)
             .setValue(hashMap)

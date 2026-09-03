@@ -28,12 +28,12 @@ class Login_email : AppCompatActivity() {
         // Inicializar Firebase Auth
         firebaseAuth = FirebaseAuth.getInstance()
 
-        // Configuración de diálogo de progreso (Paso 10-11 del PDF)
+        // Configuración de diálogo de progreso
         progressDialog = ProgressDialog(this)
         progressDialog.setTitle(getString(R.string.msg_espere_por_favor))
         progressDialog.setCanceledOnTouchOutside(false)
 
-        // Botón para ir a Registro de nuevo usuario (Paso 22-23 del PDF)
+        // Botón para ir a Registro de nuevo usuario
         binding.TxtRegistrarme.setOnClickListener {
             startActivity(Intent(this@Login_email, Registro_email::class.java))
         }

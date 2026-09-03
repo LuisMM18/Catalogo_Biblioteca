@@ -22,7 +22,7 @@ class FragmentPerfil : Fragment() {
     private var _binding: FragmentPerfilBinding? = null
     private val binding get() = _binding!!
 
-    // Variables de Firebase y Contexto (Pasos 8 y 12 del PDF)
+    // Variables de Firebase y Contexto
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var mContext: Context
 
@@ -42,13 +42,13 @@ class FragmentPerfil : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Inicializar Firebase Auth (Paso 10 del PDF)
+        // Inicializar Firebase Auth
         firebaseAuth = FirebaseAuth.getInstance()
         cargarDatosUsuario()
 
-        // Lógica para Cerrar Sesión (Pasos 10-12 del PDF)
+        // Lógica para Cerrar Sesión
         binding.BtnCerrarSesion.setOnClickListener {
-            // El método signOut es para cerrar la sesión en Firebase (Paso 11 del PDF)
+            // El método signOut es para cerrar la sesión en Firebase
             firebaseAuth.signOut()
             val intent = Intent(mContext, OpcionesLogin::class.java)
             startActivity(intent)
@@ -97,7 +97,6 @@ class FragmentPerfil : Fragment() {
                 }
 
                 override fun onCancelled(error: DatabaseError) {
-                    // Fallback visual
                     if (email.isNotEmpty()) {
                         binding.TvNombrePerfil.text = email.substringBefore("@").replaceFirstChar { it.uppercase() }
                     }
