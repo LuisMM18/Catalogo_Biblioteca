@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_warm"
+    android:padding="24dp"
+    tools:context=".Opciones_Login.OpcionesLogin">
+
+    <!-- Cabecera y Logo Circular -->
+    <LinearLayout
+        android:id="@+id/LayoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!-- Logo Circular Color Terracota -->
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_circle_logo">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_libro"
+                app:tint="@color/white"
+                android:contentDescription="@string/biblioteca_titulo"/>
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/biblioteca_titulo"
+            android:textColor="@color/text_primary"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/biblioteca_bienvenida"
+            android:textColor="@color/text_secondary"
+            android:textSize="16sp" />
+
+        <!-- Ilustración de libros apilados -->
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/ic_libros_ilustracion"
+            android:contentDescription="@string/biblioteca_titulo"/>
+
+    </LinearLayout>
+
+    <!-- Botones de Acceso en la parte inferior -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Botón Ingresar con Email (Diseño Terracota como en el mock) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/IngresarEmail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m_button_height"
+            android:backgroundTint="@color/coral_primary"
+            android:text="@string/ingresar_email"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:cornerRadius="28dp"
+            app:icon="@drawable/ic_email"
+            app:iconGravity="textStart"
+            app:iconPadding="10dp"
+            app:iconTint="@color/white"/>
+
+        <!-- Botón Ingresar con Google (Bordeado claro como en el mock) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/IngresarGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m_button_height"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/card_bg"
+            android:text="@string/ingresar_google"
+            android:textAllCaps="false"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            app:cornerRadius="28dp"
+            app:icon="@drawable/ic_google"
+            app:iconGravity="textStart"
+            app:iconPadding="10dp"
+            app:iconTint="@null"
+            app:strokeColor="@color/border_light"
+            app:strokeWidth="1.5dp"/>
+
+        <!-- Enlace Continuar sin cuenta -->
+        <TextView
+            android:id="@+id/ContinuarSinCuenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:padding="8dp"
+            android:text="@string/continuar_sin_cuenta"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
