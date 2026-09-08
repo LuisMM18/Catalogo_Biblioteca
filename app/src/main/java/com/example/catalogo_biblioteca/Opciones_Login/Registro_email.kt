@@ -58,17 +58,23 @@ class Registro_email : AppCompatActivity() {
         if (nombres.isEmpty()) {
             binding.EtNombres.error = "Ingrese su nombre"
             binding.EtNombres.requestFocus()
-        } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            binding.EtEmail.error = getString(R.string.msg_email_invalido)
-            binding.EtEmail.requestFocus()
         } else if (email.isEmpty()) {
             binding.EtEmail.error = getString(R.string.msg_ingrese_email)
+            binding.EtEmail.requestFocus()
+        } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            binding.EtEmail.error = getString(R.string.msg_email_invalido)
             binding.EtEmail.requestFocus()
         } else if (password.isEmpty()) {
             binding.EtPassword.error = getString(R.string.msg_ingrese_password)
             binding.EtPassword.requestFocus()
         } else if (password.length < 6) {
             binding.EtPassword.error = getString(R.string.msg_password_corto)
+            binding.EtPassword.requestFocus()
+        } else if (!password.any { it.isUpperCase() }) {
+            binding.EtPassword.error = getString(R.string.msg_password_mayuscula)
+            binding.EtPassword.requestFocus()
+        } else if (!password.any { it.isDigit() }) {
+            binding.EtPassword.error = getString(R.string.msg_password_numero)
             binding.EtPassword.requestFocus()
         } else if (r_password.isEmpty()) {
             binding.EtRPassword.error = getString(R.string.msg_repita_password)
