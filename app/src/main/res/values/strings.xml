@@ -1,12 +1,70 @@
 <resources>
-    <string name="app_name">Catalogo Biblioteca</string>
+    <string name="app_name">Catálogo Biblioteca</string>
+
+    <!-- Menú inferior -->
     <string name="Item_inicio">Inicio</string>
     <string name="Item_Catalogo">Catálogo</string>
-    <string name="Item_Prestamos">Prestamos</string>
+    <string name="Item_Prestamos">Préstamos</string>
     <string name="Item_Favoritos">Favoritos</string>
     <string name="Item_Perfil">Perfil</string>
+    <string name="TituloRL">Catálogo Biblioteca</string>
 
-    <string name="TituloRL">Titulo</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Opciones Login y Auth -->
+    <string name="biblioteca_titulo">Biblioteca</string>
+    <string name="biblioteca_bienvenida">¡Bienvenid@!</string>
+    <string name="ingresar_email">Ingresar con Email</string>
+    <string name="ingresar_google">Ingresar con Google</string>
+    <string name="continuar_sin_cuenta">Continuar sin cuenta</string>
+    <string name="titulo_login">Login de usuario</string>
+    <string name="titulo_registro">Registro de usuario</string>
+    <string name="hint_nombre">Nombre completo</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_repetir_password">Repetir contraseña</string>
+    <string name="btn_ingresar">INGRESAR</string>
+    <string name="btn_registrar">REGISTRAR</string>
+    <string name="no_tienes_cuenta">¿No tienes una cuenta? </string>
+    <string name="registrate">REGISTRARME</string>
+    <string name="ya_tienes_cuenta">¿Ya tienes una cuenta? </string>
+    <string name="inicia_sesion">INICIAR SESIÓN</string>
+    <string name="btn_cerrar_sesion">Cerrar sesión</string>
+
+    <!-- Mensajes y Validaciones -->
+    <string name="msg_espere_por_favor">Espere por favor</string>
+    <string name="msg_creando_cuenta">Creando cuenta...</string>
+    <string name="msg_guardando_info">Guardando información...</string>
+    <string name="msg_iniciando_sesion">Iniciando sesión...</string>
+    <string name="msg_email_invalido">Email inválido</string>
+    <string name="msg_ingrese_email">Ingrese un email</string>
+    <string name="msg_ingrese_password">Ingrese el password</string>
+    <string name="msg_repita_password">Repita el password</string>
+    <string name="msg_no_coinciden">Las contraseñas no coinciden</string>
+    <string name="msg_password_corto">La contraseña debe tener al menos 6 caracteres</string>
+
+    <!-- Textos de Pantallas de la Biblioteca -->
+    <string name="saludo_usuario">¡Hola de nuevo, Katty!</string>
+    <string name="que_vas_a_leer">¿Qué vas a leer hoy?</string>
+    <string name="buscar_libros_hint">Buscar libros, autores, géneros...</string>
+    <string name="categoria_todos">Todos</string>
+    <string name="categoria_ficcion">Ficción</string>
+    <string name="categoria_ciencia">Ciencia</string>
+    <string name="categoria_historia">Historia</string>
+    <string name="seccion_prestamos_activos">Préstamos Activos</string>
+    <string name="seccion_libros_populares">Libros Populares</string>
+    <string name="seccion_historial_lectura">Historial de Lectura</string>
+    <string name="ver_todos_2">Ver todos (2)</string>
+    <string name="explorar">Explorar</string>
+    <string name="btn_prestar">Prestar</string>
+    <string name="btn_devolver">Devolver</string>
+    <string name="badge_devuelto">Devuelto</string>
+    <string name="tab_activos">Activos (2)</string>
+    <string name="tab_historial">Historial</string>
+    <string name="favoritos_subtitulo">Tus libros guardados</string>
+    <string name="stat_leidos">Leídos</string>
+    <string name="stat_activos">Activos</string>
+    <string name="stat_favoritos">Favoritos</string>
+    <string name="opcion_notificaciones">Notificaciones</string>
+    <string name="opcion_historial">Historial de lectura</string>
+    <string name="opcion_preferencias">Preferencias</string>
+    <string name="opcion_ayuda">Ayuda &amp; Soporte</string>
 </resources>

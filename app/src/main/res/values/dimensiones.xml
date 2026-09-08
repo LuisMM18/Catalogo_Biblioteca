@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <dimen name="m_tool_height">55dp</dimen>
-    <dimen name="m_button_height">60dp</dimen>
-
+    <dimen name="m_toolbar_height">55dp</dimen>
+    <dimen name="m_button_height">56dp</dimen>
+    <dimen name="card_corner_radius">16dp</dimen>
+    <dimen name="button_corner_radius">14dp</dimen>
+    <dimen name="search_corner_radius">24dp</dimen>
 </resources>
