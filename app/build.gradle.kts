@@ -45,6 +45,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.firebaseAuth)
     implementation(libs.firebaseDatabase)
+    implementation(libs.loginGoogle)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)

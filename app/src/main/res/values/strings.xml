@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Catálogo Biblioteca</string>
 
+    <string name="default_web_client_id">833963254106-r0mb92s2q2pvimnmi6nkug8on0cqjeg8.apps.googleusercontent.com</string>
     <!-- Menú inferior -->
     <string name="Item_inicio">Inicio</string>
     <string name="Item_Catalogo">Catálogo</string>
