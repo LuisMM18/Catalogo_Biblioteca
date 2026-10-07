@@ -63,6 +63,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun verFragmentInicio() {
+        binding.ToolbarRL.visibility = android.view.View.VISIBLE
         binding.TituloRL.text = getString(R.string.Item_inicio)
         val fragment = FragmentInicio()
         val fragmentTransition = supportFragmentManager.beginTransaction()
@@ -71,7 +72,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun verFragmentCatalogo() {
-        binding.TituloRL.text = getString(R.string.Item_Catalogo)
+        binding.ToolbarRL.visibility = android.view.View.GONE
         val fragment = FragmentCatalogo()
         val fragmentTransition = supportFragmentManager.beginTransaction()
         fragmentTransition.replace(binding.Fragment1.id, fragment, "FragmentCatalogo")
@@ -79,6 +80,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun verFragmentPrestamos() {
+        binding.ToolbarRL.visibility = android.view.View.VISIBLE
         binding.TituloRL.text = getString(R.string.Item_Prestamos)
         val fragment = FragmentPrestamos()
         val fragmentTransition = supportFragmentManager.beginTransaction()
@@ -87,6 +89,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun verFragmentFavoritos() {
+        binding.ToolbarRL.visibility = android.view.View.VISIBLE
         binding.TituloRL.text = getString(R.string.Item_Favoritos)
         val fragment = FragmentFavoritos()
         val fragmentTransition = supportFragmentManager.beginTransaction()
@@ -95,6 +98,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun verFragmentPerfil() {
+        binding.ToolbarRL.visibility = android.view.View.VISIBLE
         binding.TituloRL.text = getString(R.string.Item_Perfil)
         val fragment = FragmentPerfil()
         val fragmentTransition = supportFragmentManager.beginTransaction()

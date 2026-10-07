@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/CardLibro"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/border_light"
+    app:cardBackgroundColor="@color/card_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Portada del libro con esquinas redondeadas -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/IvPortadaLibro"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:background="@color/chip_unselected"
+            app:shapeAppearanceOverlay="@style/RoundedCornerBookCover"
+            tools:src="@drawable/ic_libro" />
+
+        <!-- Título del libro -->
+        <TextView
+            android:id="@+id/TvTituloLibro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:maxLines="2"
+            android:minLines="2"
+            android:ellipsize="end"
+            tools:text="Cien Años de Soledad" />
+
+        <!-- Autor del libro -->
+        <TextView
+            android:id="@+id/TvAutorLibro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="Gabriel García Márquez" />
+
+        <!-- Botón de acción: Prestar -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/BtnPrestar"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_prestar"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/coral_primary"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            app:cornerRadius="12dp"
+            app:backgroundTint="@color/coral_light"
+            app:elevation="0dp" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

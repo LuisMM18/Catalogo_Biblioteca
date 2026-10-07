@@ -8,6 +8,10 @@
         <item name="android:statusBarColor">@color/bg_warm</item>
         <item name="android:windowLightStatusBar">true</item>
     </style>
-
     <style name="Theme.Catalogo_Biblioteca" parent="Base.Theme.Catalogo_Biblioteca" />
+
+    <!-- Estilo para esquinas redondeadas de portadas de libros -->
+    <style name="RoundedCornerBookCover" parent="">
+        <item name="cornerSize">12dp</item>
+    </style>
 </resources>

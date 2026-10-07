@@ -1,18 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@color/bg_warm"
     tools:context=".Fragmentos.FragmentCatalogo">
 
+    <!-- Título superior: Catálogo -->
     <TextView
+        android:id="@+id/TvTituloCatalogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textColor="@color/text_primary"
-        android:textSize="20sp"
+        android:text="@string/Item_Catalogo"
+        android:textSize="28sp"
         android:textStyle="bold"
-        android:text="@string/Item_Catalogo" />
+        android:fontFamily="serif"
+        android:textColor="@color/text_primary"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="12dp" />
 
-</FrameLayout>
+    <!-- Barra horizontal de filtros por categorías -->
+    <HorizontalScrollView
+        android:id="@+id/HsvCategorias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:clipToPadding="false"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/ChipTodos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/categoria_todos"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_chip_selected"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="9dp"
+                android:paddingBottom="9dp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/ChipFiccion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/categoria_ficcion"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:background="@drawable/bg_chip_unselected"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="9dp"
+                android:paddingBottom="9dp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/ChipCiencia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/categoria_ciencia"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:background="@drawable/bg_chip_unselected"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="9dp"
+                android:paddingBottom="9dp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/ChipHistoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/categoria_historia"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:background="@drawable/bg_chip_unselected"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="9dp"
+                android:paddingBottom="9dp" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Contenedor de la Cuadrícula de Libros -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Grid de libros en 2 columnas -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RvLibros"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="16dp"
+            tools:listitem="@layout/item_libro" />
+
+        <!-- Indicador de carga -->
+        <ProgressBar
+            android:id="@+id/PbCargando"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/coral_primary" />
+
+        <!-- Mensaje cuando no hay libros disponibles en el filtro -->
+        <TextView
+            android:id="@+id/TvSinLibros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="No hay libros disponibles en esta categoría"
+            android:textColor="@color/text_secondary"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+</LinearLayout>
